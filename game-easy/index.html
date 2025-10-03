@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Puzzle Grid — Easy (6×6)</title>
+  <link rel="stylesheet" href="/assets/css/common.css" />
+  <link rel="stylesheet" href="/game-easy/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Primary">
+      <a class="brand link" href="/">Puzzle Grid</a>
+      <div class="navlinks">
+        <a class="nav-link" href="/selection/">Games</a>
+        <a class="nav-link" href="/game-hard/">Hard</a>
+        <a class="nav-link" href="/game-easy/" aria-current="page">Easy</a>
+        <a class="nav-link" href="/highscores/">High Scores</a>
+        <a class="nav-link" href="/rules/">Rules</a>
+        <a class="nav-link" href="/login/">Login</a>
+        <a class="nav-link" href="/register/">Register</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="toolbar card">
+      <div class="row">
+        <div class="note">Enter digits 1–9 (typically 1–6 used).</div>
+        <div class="spacer"></div>
+        <div class="timer" aria-label="Elapsed time">05:21</div>
+      </div>
+    </section>
+
+    <section class="board card" aria-label="6×6 Sudoku Board">
+      <div class="grid">
+        <!-- Row 1 -->
+        <div class="cell"><input class="sudoku" inputmode="numeric" maxlength="1" pattern="[1-9]" aria-label="R1C1"></div>
+        <div class="cell box-right"><input class="sudoku" inputmode="numeric" maxlength="1" pattern="[1-9]" aria-label="R1C2"></div>
+        <div class="cell"><input class="sudoku" inputmode="numeric" maxlength="1" pattern="[1-9]" aria-label="R1C3"></div>
+        <div class="cell box-right"><input class="sudoku" inputmode="numeric" maxlength="1" pattern="[1-9]" aria-label="R1C4"></div>
+        <div class="cell"><input class="sudoku" inputmode="numeric" maxlength="1" pattern="[1-9]" aria-label="R1C5"></div>
+        <div class="cell"><input class="sudoku" inputmode="numeric" maxlength="1" pattern="[1-9]" aria-label="R1C6"></div>
+        <!-- Row 2 (bottom subgrid) -->
+        <div class="cell box-bottom"><input class="sudoku" inputmode="numeric" maxlength="1" pattern="[1-9]" aria-label="R2C1"></div>
+        <div class="cell box-right box-bottom"><input class="sudoku" inputmode="numeric" maxlength="1" pattern="[1-9]" aria-label="R2C2"></div>
+        <div class="cell box-bottom"><input class="sudoku" inputmode="numeric" maxlength="1" pattern="[1-9]" aria-label="R2C3"></div>
+        <div class="cell box-right box-bottom"><input class="sudoku" inputmode="numeric" maxlength="1" pattern="[1-9]" aria-label="R2C4"></div>
+        <div class="cell box-bottom"><input class="sudoku" inputmode="numeric" maxlength="1" pattern="[1-9]" aria-label="R2C5"></div>
+        <div class="cell box-bottom"><input class="sudoku" inputmode="numeric" maxlength="1" pattern="[1-9]" aria-label="R2C6"></div>
+        <!-- Row 3 -->
+        <div class="cell"><input class="sudoku" inputmode="numeric" maxlength="1" pattern="[1-9]" aria-label="R3C1"></div>
+        <div class="cell box-right"><input class="sudoku" inputmode="numeric" maxlength="1" pattern="[1-9]" aria-label="R3C2"></div>
+        <div class="cell"><input class="sudoku" inputmode="numeric" maxlength="1" pattern="[1-9]" aria-label="R3C3"></div>
+        <div class="cell box-right"><input class="sudoku" inputmode="numeric" maxlength="1" pattern="[1-9]" aria-label="R3C4"></div>
+        <div class="cell"><input class="sudoku" inputmode="numeric" maxlength="1" pattern="[1-9]" aria-label="R3C5"></div>
+        <div class="cell"><input class="sudoku" inputmode="numeric" maxlength="1" pattern="[1-9]" aria-label="R3C6"></div>
+        <!-- Row 4 (bottom subgrid) -->
+        <div class="cell box-bottom"><input class="sudoku" inputmode="numeric" maxlength="1" pattern="[1-9]" aria-label="R4C1"></div>
+        <div class="cell box-right box-bottom"><input class="sudoku" inputmode="numeric" maxlength="1" pattern="[1-9]" aria-label="R4C2"></div>
+        <div class="cell box-bottom"><input class="sudoku" inputmode="numeric" maxlength="1" pattern="[1-9]" aria-label="R4C3"></div>
+        <div class="cell box-right box-bottom"><input class="sudoku" inputmode="numeric" maxlength="1" pattern="[1-9]" aria-label="R4C4"></div>
+        <div class="cell box-bottom"><input class="sudoku" inputmode="numeric" maxlength="1" pattern="[1-9]" aria-label="R4C5"></div>
+        <div class="cell box-bottom"><input class="sudoku" inputmode="numeric" maxlength="1" pattern="[1-9]" aria-label="R4C6"></div>
+        <!-- Row 5 -->
+        <div class="cell"><input class="sudoku" inputmode="numeric" maxlength="1" pattern="[1-9]" aria-label="R5C1"></div>
+        <div class="cell box-right"><input class="sudoku" inputmode="numeric" maxlength="1" pattern="[1-9]" aria-label="R5C2"></div>
+        <div class="cell"><input class="sudoku" inputmode="numeric" maxlength="1" pattern="[1-9]" aria-label="R5C3"></div>
+        <div class="cell box-right"><input class="sudoku" inputmode="numeric" maxlength="1" pattern="[1-9]" aria-label="R5C4"></div>
+        <div class="cell"><input class="sudoku" inputmode="numeric" maxlength="1" pattern="[1-9]" aria-label="R5C5"></div>
+        <div class="cell"><input class="sudoku" inputmode="numeric" maxlength="1" pattern="[1-9]" aria-label="R5C6"></div>
+        <!-- Row 6 -->
+        <div class="cell"><input class="sudoku" inputmode="numeric" maxlength="1" pattern="[1-9]" aria-label="R6C1"></div>
+        <div class="cell box-right"><input class="sudoku" inputmode="numeric" maxlength="1" pattern="[1-9]" aria-label="R6C2"></div>
+        <div class="cell"><input class="sudoku" inputmode="numeric" maxlength="1" pattern="[1-9]" aria-label="R6C3"></div>
+        <div class="cell box-right"><input class="sudoku" inputmode="numeric" maxlength="1" pattern="[1-9]" aria-label="R6C4"></div>
+        <div class="cell"><input class="sudoku" inputmode="numeric" maxlength="1" pattern="[1-9]" aria-label="R6C5"></div>
+        <div class="cell"><input class="sudoku" inputmode="numeric" maxlength="1" pattern="[1-9]" aria-label="R6C6"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer container">Fake timer shown</footer>
+</body>
+</html>

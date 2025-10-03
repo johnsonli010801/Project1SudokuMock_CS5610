@@ -1,0 +1,99 @@
+/* ===== Common (site-wide) CSS ===== */
+:root{
+  --bg:#0f1115; --card:#171a21; --text:#e8ecf1; --muted:#9aa6b2;
+  --accent:#4da3ff; --accent-weak:#2b71c7;
+  --line:#273043; --box:#4b5464; --danger:#ff5a87;
+  --nav-h:56px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif; /* font-family */
+  color:var(--text);
+  background:linear-gradient(180deg,#0f1115,#0c0e12);                     /* background */
+  display:flex; flex-direction:column;
+  padding-top:var(--nav-h);                                                /* prevent overlap with sticky nav */
+}
+
+a{color:var(--accent); text-decoration:none}
+a:hover{text-decoration:underline}
+
+.container{width:min(100%,980px); margin:16px auto; padding:0 16px}        /* margin + padding */
+.card{
+  background:var(--card); border:1px solid #202531; border-radius:16px;
+  padding:16px; box-shadow:0 6px 20px rgba(0,0,0,.25);
+  transition:transform .15s ease, box-shadow .15s ease;                    /* transition */
+}
+.card:hover{ transform:translateY(-2px); box-shadow:0 10px 24px rgba(0,0,0,.35) } /* transform */
+
+.row{display:flex; align-items:center; gap:12px}                            /* flex + align-items */
+.stack{display:grid; gap:12px}                                              /* grid */
+.center{text-align:center}
+.spacer{flex:1}
+
+.btn{
+  appearance:none; border:1px solid var(--accent-weak);
+  background:var(--accent); color:#07121e; font-weight:700;
+  padding:10px 14px; border-radius:12px; display:inline-block
+}
+.btn.secondary{background:transparent; color:var(--text); border-color:#3a4154}
+
+.field{display:grid; gap:6px}
+.field input,.field select,.field textarea{
+  background:#10151e; color:var(--text); border:1px solid #2c3342;
+  padding:10px 12px; border-radius:10px
+}
+label{display:flex; align-items:center; gap:8px}
+
+.note{color:var(--muted); font-size:.95rem}
+.visually-hidden{
+  position:absolute!important; height:1px; width:1px; overflow:hidden;
+  clip:rect(1px,1px,1px,1px); white-space:nowrap
+}
+
+/* ===== Navbar (sticky top on desktop, fixed bottom on mobile) ===== */
+.site-header{
+  position:sticky; top:0; z-index:1000; background:var(--card);
+  border-bottom:1px solid #1d2029;
+}
+.navbar{ display:flex; align-items:center; gap:12px }                        /* align-items */
+.brand{
+  font-weight:800; letter-spacing:1px; display:inline-flex; align-items:center; gap:8px
+}
+.brand::after{ content:" ⬚"; opacity:.6; transform:translateY(-1px) }       /* pseudo-element */
+.navlinks{ display:flex; gap:10px; margin-left:auto; flex-wrap:wrap }
+.nav-link{
+  padding:8px 10px; border-radius:10px;
+  transition:transform .15s ease, background-color .15s ease, color .15s ease
+}
+.nav-link:hover,.nav-link:focus-visible{ background-color:#1e2330; transform:translateY(-1px) } /* pseudo-class */
+.nav-link:first-child{ margin-left:0 }                                                                             /* pseudo-class */
+.nav-link[aria-current="page"]{ background:var(--accent); color:#07121e; border:1px solid var(--accent-weak) }
+
+/* Tables for highscores */
+.table{ width:100%; border-collapse:collapse }
+.table th,.table td{ padding:10px 12px; border-bottom:1px solid #2a2f3a; text-align:left } /* text-align */
+.table th{ color:var(--muted) }
+
+/* ===== Responsive: iPhone 12 ~390px ===== */
+@media (max-width:420px){
+  .site-header{ position:fixed; top:auto; bottom:0; width:100%; border-top:1px solid #1d2029; border-bottom:none }
+  body{ padding-top:0; padding-bottom:var(--nav-h) }                           /* position + padding */
+  .brand{ font-size:.95rem }
+  .nav-link{ padding:8px 9px; font-size:.9rem }
+}
+
+.hero {
+  text-align: center;
+  margin: 40px auto;
+}
+
+.hero-img {
+  max-width: 260px;
+  display: block;
+  margin: 12px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,.3);
+}

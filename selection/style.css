@@ -1,0 +1,8 @@
+.selection-list{ display:grid; gap:16px; padding:0; list-style:none }
+.selection-item{
+  background:var(--card); border:1px solid #202531; border-radius:12px;
+  padding:12px 16px; transition:background .2s ease
+}
+.selection-item:hover{ background:#1e2330 }
+.selection-item a{ display:block; font-size:1.2rem; font-weight:700; color:var(--accent); margin-bottom:4px }
+.selection-item span{ font-size:.95rem; color:var(--muted) }

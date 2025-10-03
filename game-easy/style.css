@@ -1,0 +1,24 @@
+.board{
+  width:min(90vw,420px); margin:12px auto; border-radius:12px;
+  border:2px solid var(--box); overflow:hidden; background:#11151b
+}
+.grid{
+  display:grid; grid-template-columns:repeat(6,1fr);
+  border-top:1px solid var(--line); border-left:1px solid var(--line)
+}
+.cell{
+  aspect-ratio:1/1; display:flex; align-items:center; justify-content:center;
+  border-right:1px solid var(--line); border-bottom:1px solid var(--line)
+}
+/* 2×3 subgrids: thick after col 2 & 4 and row 2 & 4 */
+.cell.box-right{ box-shadow:inset -2px 0 0 var(--box) }
+.cell.box-bottom{ box-shadow:inset 0 -2px 0 var(--box) }
+
+input.sudoku{
+  width:100%; height:100%; text-align:center;
+  font-size:clamp(16px,6vw,28px); color:var(--text);
+  background:transparent; border:0; outline:0
+}
+input.sudoku:invalid:not(:placeholder-shown){ background:#21131a }
+input.sudoku:focus{ box-shadow:inset 0 0 0 2px var(--accent-weak) }
+.timer{ font-variant-numeric:tabular-nums; font-weight:700; padding:6px 10px; border:1px solid #394152; border-radius:10px; background:#10151e }

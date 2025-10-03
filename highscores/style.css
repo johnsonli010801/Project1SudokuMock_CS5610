@@ -1,0 +1,2 @@
+/* Page-specific tiny touch so every page has its own CSS */
+.leaderboard caption{ caption-side:top; color:var(--muted); padding:6px 0 }

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Puzzle Grid — Register</title>
+  <link rel="stylesheet" href="/assets/css/common.css" />
+  <link rel="stylesheet" href="/register/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Primary">
+      <a class="brand link" href="/">Puzzle Grid</a>
+      <div class="navlinks">
+        <a class="nav-link" href="/selection/">Games</a>
+        <a class="nav-link" href="/game-hard/">Hard</a>
+        <a class="nav-link" href="/game-easy/">Easy</a>
+        <a class="nav-link" href="/highscores/">High Scores</a>
+        <a class="nav-link" href="/rules/">Rules</a>
+        <a class="nav-link" href="/login/">Login</a>
+        <a class="nav-link" href="/register/" aria-current="page">Register</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <!-- Mock-only: action can point anywhere; no processing occurs -->
+      <form class="form" action="/selection/" method="get" novalidate>
+        <div class="field">
+          <label for="ru">Username</label>
+          <input id="ru" name="username" autocomplete="username" required />
+        </div>
+
+        <div class="field">
+          <label for="rp">Password</label>
+          <input id="rp" name="password" type="password" autocomplete="new-password" required />
+        </div>
+
+        <div class="field">
+          <label for="rv">Verify Password</label>
+          <input id="rv" name="verify_password" type="password" autocomplete="new-password" required />
+          <p class="helper">Both password fields are masked using <code>type="password"</code>.</p>
+        </div>
+
+        <button class="btn" type="submit">Create Account</button>
+        <p class="note">This is a mock form; nothing is stored or validated.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer container">Already registered? <a href="/login/">Login</a></footer>
+</body>
+</html>
