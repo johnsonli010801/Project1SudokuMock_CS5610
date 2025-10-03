@@ -24,7 +24,7 @@ I wanted the site to feel simple and consistent, so I used card layouts with rou
 I would add real puzzle logic with JavaScript so players could actually solve Sudoku puzzles and check answers. I would also add a functioning timer, a scoreboard that stores data, and user accounts with persistent logins. Another idea is to add theming options so players can switch between light and dark modes.  
 
 ### ⏰ How many hours did you spend on this assignment?  
-~XX hours.  
+~15 hours.  
 
 ### (Optional) Assumptions  
 I assumed the timer and high scores only needed to be static mockups, not functional. I also assumed it was fine to use fake author names and user names in the selection and high score pages.  
