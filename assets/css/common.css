@@ -78,7 +78,7 @@ label{display:flex; align-items:center; gap:8px}
 .table th{ color:var(--muted) }
 
 /* ===== Responsive: iPhone 12 ~390px ===== */
-@media (max-width: 420px) {
+@media (max-width: 600px) {
   /* slightly taller nav on mobile */
   :root {
     --nav-h: 70px;
