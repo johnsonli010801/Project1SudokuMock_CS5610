@@ -78,12 +78,58 @@ label{display:flex; align-items:center; gap:8px}
 .table th{ color:var(--muted) }
 
 /* ===== Responsive: iPhone 12 ~390px ===== */
-@media (max-width:420px){
-  .site-header{ position:fixed; top:auto; bottom:0; width:100%; border-top:1px solid #1d2029; border-bottom:none }
-  body{ padding-top:0; padding-bottom:var(--nav-h) }                           /* position + padding */
-  .brand{ font-size:.95rem }
-  .nav-link{ padding:8px 9px; font-size:.9rem }
+@media (max-width: 420px) {
+  /* slightly taller nav on mobile */
+  :root {
+    --nav-h: 70px;
+  }
+
+  /* put navbar at the bottom, full width */
+  .site-header {
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    width: 100%;
+    background: #10131a;
+    border-top: 1px solid #1d2029;
+    border-bottom: none;
+    z-index: 1000;
+  }
+
+  /* make sure content isn't hidden behind nav */
+  body {
+    padding-top: 0;
+    padding-bottom: var(--nav-h);
+  }
+
+  /* compact horizontal bar */
+  .navbar {
+    padding: 8px 10px;
+    justify-content: space-between;
+  }
+
+  /* hide long brand text to save space */
+  .brand {
+    display: none;
+  }
+
+  /* nav links become a single row, evenly spaced */
+  .navlinks {
+    margin-left: 0;
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 6px;
+  }
+
+  .nav-link {
+    padding: 6px 4px;
+    font-size: 0.8rem;
+    text-align: center;
+  }
 }
+
 
 .hero {
   text-align: center;
